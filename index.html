@@ -1,0 +1,188 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The King's LLC - Handyman Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 4px 0;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                background: white;
+                width: 100%;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>The King's LLC</h1>
+            <p>Your trusted handyman services in Norwalk, CT!</p>
+            <a href="tel:+19175179245" style="color: white; background: #ff5733; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Call Now</a>
+            <br>
+            <a href="https://www.google.com/maps/search/?api=1&query=The%20King's%20LLC%2010%20Peter%20St%2C%20Norwalk%2C%20CT%2006851%2C%20USA" target="_blank" style="color: white; text-decoration: underline;">Get Directions</a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>At The King's LLC, we pride ourselves on providing exceptional handyman services to meet your needs. With a 5/5 rating from our satisfied clients, we guarantee quality and professionalism in every job.</p>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Home Repairs</li>
+            <li>Plumbing Services</li>
+            <li>Electrical Work</li>
+            <li>Painting & Drywall</li>
+            <li>Carpentry</li>
+        </ul>
+    </section>
+
+    <section class="section" id="hours">
+        <h2>Our Hours</h2>
+        <p>Monday - Friday: 8 AM - 6 PM</p>
+        <p>Saturday: 9 AM - 5 PM</p>
+        <p>Sunday: Closed</p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 10 Peter St, Norwalk, CT 06851, USA</p>
+        <p>Phone: <a href="tel:+19175179245">(917) 517-9245</a></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 The King's LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+<script>
+(function(){document.addEventListener('click',function(e){
+  var el=e.target.closest('a'); if(!el)return;
+  var href=el.getAttribute('href');
+  if(href&&href.startsWith('#')&&href.length>1){
+    e.preventDefault();
+    var t=document.getElementById(href.slice(1));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  }
+},true);})();
+</script>
+</body>
+
+</html>
+```
